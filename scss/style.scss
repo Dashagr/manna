@@ -2,17 +2,13 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "menu.scss";
+@import "slider.scss";
 
 body {
     background-color: $background;
     color: $fontColor;
     font-family: $font;
 }
-
-// .info-content {
-//     background-color: $topMenuColor;
-//     padding: 0 40px;
-// }
 
 .info {
     height: 50px;
@@ -102,7 +98,11 @@ body {
                 align-items: center;
                 justify-content: space-between;
             }
+            &:hover {
+                background-color: $topMenuColor;
+            }
         }
+
 
         .logo-section__form {
             a {
@@ -132,23 +132,28 @@ body {
         @include flex-row;
         align-items: center;
 
-        a {
-            font-weight: 400;
-            text-decoration: none;
-            color: $fontColor;
-            cursor: pointer;
+        .login {
+            @include flex-row;
+            align-items: center;
 
-            span {
-                padding-bottom: 6px;
-            }
+            a {
+                font-weight: 400;
+                text-decoration: none;
+                color: $fontColor;
+                cursor: pointer;
 
-            &:first-child::after {
-                @include dash;
-            }
+                span {
+                    padding-bottom: 6px;
+                }
 
-            &:hover span {
-                color: $phoneColor;
-                @include hover-dott;
+                &:first-child::after {
+                    @include dash;
+                }
+
+                &:hover span {
+                    color: $phoneColor;
+                    @include hover-dott;
+                }
             }
         }
 
@@ -200,28 +205,144 @@ body {
     }
 }
 
+@media screen and (max-width: 1200px) {
 
-.topnav {
-    font-size: $fSize;
+    .navigation .navigation__item #desctop a {
+        margin-right: 10px;
+        text-align: center;
+        justify-content: flex-start;
+    }
 
-    .topnav__item {
-        font-weight: 700;
-        color: $fontColor;
-        font-size: 16px;
-        text-transform: uppercase;
-        text-decoration: none;
+    .logo-section .phone {
 
-        &:hover span {
-            border-bottom: 2px solid $fontColor;
-        }
+        flex-direction: column;
 
-        &:not(:first-child):before {
-            @include dash;
+        .logo-section__form {
+            margin-top: 20px;
+
+            a {
+                margin-left: 5px;
+            }
         }
     }
 
-    .icon {
+    .logo-section .logo-section__login {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        .logo-section__search {
+            margin-left: 0;
+        }
+    }
+
+}
+
+@media screen and (max-width:840px) {
+    .logo-section__logo {
         display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .logo-section .phone {
+        flex-direction: row;
+
+        .logo-section__form {
+            margin-top: 0px;
+        }
+    }
+
+    .logo-section .logo-section__login {
+        flex-direction: row;
+        align-items: center;
+
+        .logo-section__search {
+            margin-left: 30px;
+        }
+    }
+
+    .info {
+        box-shadow: $boxShadow;
+
+        .info__buttons {
+            .language {
+                select {
+                    margin: 0 20px;
+                }
+            }
+        }
+    }
+
+    .logo-section__logo {
+        display: none;
+    }
+
+    .logo-section {
+        padding: 28px 20px;
+
+        .phone {
+            .phone__number {
+                width: fit-content;
+                border: 0;
+                padding-right: 10px;
+
+                img {
+                    transform: scale(1.1);
+                }
+
+                p {
+                    display: none;
+                }
+            }
+
+            .logo-section__form {
+                a {
+                    margin-left: 0px;
+                }
+
+                &:hover a {
+                    padding: 15px 7px;
+                }
+            }
+        }
+    }
+
+    .logo-section {
+        .logo-section__login {
+            .logo-section__search {
+                form {
+                    input {
+                        width: 120px;
+
+                        &:focus {
+                            width: 190px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
+@media screen and (max-width: 580px) {
+    .logo-section .logo-section__login {
+        .login {
+            flex-direction: column;
+        }
+
+        .logo-section__search {
+            margin-left: 5px;
+        }
+    }
+
+    .info .info__buttons .info__socials {
+        display: none;
+    }
+
+    .logo-section .phone .logo-section__form a{
+        display: none;
+    }
+}

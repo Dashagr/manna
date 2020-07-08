@@ -18,3 +18,13 @@
     border-bottom: 0.5px dotted;
     padding-bottom: 6px;
 }
+
+@mixin burg {
+    text-align: center;
+    background-color: $topMenuColor;
+    margin: 0;
+    height: 50px;
+    width: 33%;
+    position: fixed;
+    box-shadow: $boxShadow;
+}
