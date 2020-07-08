@@ -1,9 +1,12 @@
-menu.onclick = function shortMenu() {
-    var x = document.getElementById("menuTopnav");
+$(".mobile-tab").hide();
 
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
+$("#burg").on("click", function () {
+    $(".mobile-tab").slideToggle(500);
+});
+
+
+$(".mobile-tab-nav").hide();
+
+$("#burg-nav").on("click", function () {
+    $(".mobile-tab-nav").slideToggle(500);
+});

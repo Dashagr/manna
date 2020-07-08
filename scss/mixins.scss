@@ -13,3 +13,8 @@
     color: $dashColor;
     margin: 0 20px;
 }
+
+@mixin hover-dott {
+    border-bottom: 0.5px dotted;
+    padding-bottom: 6px;
+}

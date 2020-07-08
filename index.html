@@ -16,13 +16,39 @@
     <header>
         <div class="info">
 
-            <div class="info-menu" id="info-menu">
-                <a href="#" class="info-menu__item">FAQ</a>
-                <a href="#" class="info-menu__item">Оплата и доставка</a>
-                <a href="#" class="info-menu__item">Бонусная система</a>
-                <a href="#" class="info-menu__item">О нас</a>
-                <a href="#" class="info-menu__item">Контакты</a>
-                <a href="#" class="info-menu__item">Вакансии</a>
+            <div class="info__menu">
+                <div class="navigation">
+                    <div class="navigation__item">
+                        <div id="desctop">
+                            <a href="#" class="scroll">FAQ</a>
+                            <a href="#" class="scroll">Оплата и доставка</a>
+                            <a href="#" class="scroll">Бонусная система</a>
+                            <a href="#" class="scroll">О нас</a>
+                            <a href="#" class="scroll">Контакты</a>
+                            <a href="#" class="scroll">Вакансии</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="burg">
+                    <a href="#">
+                        <i class="fas fa-info"></i> 
+                    </a>
+                </div>
+
+                <div class="mobile-tab">
+                    <div id="mobile">
+                       <ul> 
+                           <li><a href="#" class="scroll">FAQ</a></li>
+                        <li><a href="#" class="scroll">Оплата и доставка</a></li>
+                        <li><a href="#" class="scroll">Бонусная система</a></li>
+                        <li><a href="#" class="scroll">О нас</a></li>
+                        <li><a href="#" class="scroll">Контакты</a></li>
+                        <li><a href="#" class="scroll">Вакансии</a></li>
+                    </ul>
+                    
+                    </div>
+                </div>
             </div>
 
             <div class="info__buttons">
@@ -40,6 +66,7 @@
                     </select>
                 </div>
             </div>
+
         </div>
 
         <div class="logo-section">
@@ -72,20 +99,45 @@
             </div>
         </div>
 
-        <nav>
-            <div class="topnav" id="menuTopnav">
-                <a href="#" class="topnav__item"><span>о нас</span></a>
-                <a href="#" class="topnav__item"><span>украинка</span></a>
-                <a href="#" class="topnav__item"><span>ресторанная посуда</span></a>
-                <a href="#" class="topnav__item"><span>блог</span></a>
-                <a href="#" class="topnav__item"><span>контакты</span></a>
-                <a id="menu" href="#" class="topnav__item icon">&#9776;</a>
+        <div class="ancor-menu">
+            <div class="navigation-nav">
+                <div class="navigation-nav__item">
+                    <div id="desctop-nav"> 
+                        <a class="scroll-nav" href="#"><span>о нас</span></a>
+                        <a class="scroll-nav" href="#"><span>украинка</span></a>
+                        <a class="scroll-nav" href="#""><span>ресторанная посуда</span></a>
+                        <a class="scroll-nav" href="#"><span>блог</span></a>
+                        <a class="scroll-nav" href="#"><span>контакты</span></a>
+                    </div>
+                </div>
+
+                <div id="burg-nav">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
             </div>
-        </nav>
+
+
+            <div class="mobile-tab-nav">
+                <nav id="mobile-nav">
+                    <ul>
+                        <li><a class="scroll-nav" href="#">о нас</a></li>
+                        <li><a class="scroll-nav" href="#">украинка</a></li>
+                        <li><a class="scroll-nav" href="#"">ресторанная посуда</a></li>
+                        <li><a class=" scroll-nav" href="#">блог</a></li>
+                        <li><a class="scroll-nav" href="#">контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
     </header>
 
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" data-auto-replace-svg></script>
     <script defer src="js/script.js"></script>
 </body>
+
 </html>
