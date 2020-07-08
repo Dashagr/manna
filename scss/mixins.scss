@@ -1,0 +1,15 @@
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@mixin paddings {
+    padding: 0 40px;
+}
+
+@mixin dash {
+    content: "|";
+    color: $dashColor;
+    margin: 0 20px;
+}

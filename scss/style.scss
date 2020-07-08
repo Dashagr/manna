@@ -1,0 +1,260 @@
+@import "../css/normalize.css";
+@import "variables.scss";
+@import "mixins.scss";
+
+body {
+    background-color: $background;
+    color: $fontColor;
+    font-family: $font;
+}
+
+.info-content {
+    background-color: $topMenuColor;
+    padding: 0 40px;
+}
+
+.info {
+    height: 50px;
+    width: 100%;
+    background-color: $topMenuColor;
+    @include flex-row;
+
+    .info-menu {
+        @include flex-row;
+        align-items: center;
+        margin-left: $content;
+
+        .info-menu__item {
+            color: $fontColor;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: $fSize;
+            margin-right: 38px;
+        }
+    }
+
+    .info__buttons {
+        @include flex-row;
+        align-items: center;
+
+        .info__socials {
+            @include flex-row;
+            color: $socialsColor;
+
+            .rounded {
+                width: 24px;
+                height: 23px;
+                border: 1px solid $socialsColor;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-self: center;
+                margin: 0 3px;
+
+                svg {
+                    align-self: center;
+                    width: 15px;
+                    height: 10px;
+                }
+            }
+        }
+
+        .language {
+            select {
+                font-size: $fSize;
+                color: $fontColor;
+                border: none;
+                background-color: inherit;
+                cursor: pointer;
+                margin: 0 $content;
+            }
+        }
+    }
+}
+
+
+.logo-section {
+    @include flex-row;
+    padding: 28px $content;
+
+    .phone {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .phone__number {
+            border: 1px solid $phoneColor;
+            border-radius: 23px;
+            height: 47px;
+            width: 207px;
+            box-sizing: border-box;
+            padding: 8px 23px 8px 8px;
+            display: flex;
+            align-items: center;
+
+            & a {
+                text-decoration: none;
+                color: $phoneColor;
+                display: flex;
+                font-weight: 500;
+                font-size: $fSize;
+                width: 100%;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        .logo-section__form {
+            a {
+                font-size: 12px;
+                font-weight: 400;
+                text-decoration: none;
+                color: $phoneColor;
+                margin-left: 37px;
+            }
+        }
+    }
+
+    .logo-section__login {
+        @include flex-row;
+        align-items: center;
+
+        a {
+            font-weight: 400;
+            text-decoration: none;
+            color: $fontColor;
+            cursor: pointer;
+
+            span {
+                padding-bottom: 6px;
+            }
+
+            &:first-child::after {
+                @include dash;
+            }
+
+            &:hover span {
+                color: $phoneColor;
+                border-bottom: 0.5px dotted;
+            }
+        }
+
+        .logo-section__search {
+            margin-left: 30px;
+
+            form {
+                width: auto;
+                float: right;
+                position: relative;
+
+                input {
+                    width: 244px;
+                    height: 45px;
+                    box-sizing: border-box;
+                    padding-left: 22px;
+                    border-radius: 23px;
+                    border: 1px solid $searchBorderColor;
+                    outline: none;
+                    position: relative;
+                    transition: .3s linear;
+                    color: $searchColor;
+                    font-size: 12px;
+                }
+
+                &:focus {
+                    width: 300px;
+                }
+            }
+
+            button {
+                width: 42px;
+                height: 42px;
+                background: none;
+                border: none;
+                position: absolute;
+                top: 3px;
+                right: 13px;
+
+                &:before {
+                    content: url("/img/search.svg");
+
+                }
+            }
+        }
+
+    }
+}
+
+
+nav {
+    margin: auto;
+    max-width: 100%;
+    height: 67px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $borderBlock;
+    box-sizing: border-box;
+}
+
+.topnav {
+    font-size: $fSize;
+
+    .topnav__item {
+        font-weight: 700;
+        color: $fontColor;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover span {
+            border-bottom: 2px solid $fontColor;
+        }
+
+        &:not(:first-child):before {
+            @include dash;
+        }
+    }
+
+    .icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .topnav {
+        .topnav__item {
+            display: none;
+
+            &.icon {
+                float: right;
+                margin-top: -17px;
+                display: block;
+                color: $fontColor;
+            }
+        }
+
+        &.responsive {
+            position: relative;
+
+            .topnav__item.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav__item {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+    }
+
+    nav {
+        width: 100%;
+        height: 67px;
+    }
+}
