@@ -564,7 +564,7 @@ body {
   right: 13px;
 }
 .logo-section .logo-section__login .logo-section__search button:before {
-  content: url("/img/search.svg");
+  content: url("../img/search.svg");
 }
 
 @media screen and (max-width: 1200px) {
